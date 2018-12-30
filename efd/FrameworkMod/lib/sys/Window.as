@@ -2,15 +2,6 @@
 // Released under the terms of the MIT License
 // https://github.com/Earthfiredrake/SWL-FrameworkMod
 
-import flash.geom.Point;
-
-import com.GameInterface.DistributedValue;
-import com.Utils.WeakPtr;
-
-import efd.FrameworkMod.lib.DebugUtils;
-import efd.FrameworkMod.lib.LocaleManager;
-import efd.FrameworkMod.lib.Mod;
-
 // Window subsystem implementation
 // Dependencies:
 //   Subsystems: Config, Localization
@@ -37,7 +28,13 @@ import efd.FrameworkMod.lib.Mod;
 // Handles window creation and display, may be included multiple times to provide additional windows if needed (once modular subsystems handle arbitrary additions)
 //   Config system includes a ConfigWindow instance without having to be added separately (though content must be provided)
 
-class efd.FrameworkMod.lib.sys.Window {
+import flash.geom.Point;
+
+import com.GameInterface.DistributedValue;
+import com.Utils.WeakPtr;
+
+// Mod namespace qualified imports and class definition are #included from locally overriden file
+#include "Window.lcl.as"
 	public static function Create(mod:Mod, initObj:Object):Window {
 		// Check required parameters
 		if (!initObj.WindowName) {

@@ -2,27 +2,6 @@
 // Released under the terms of the MIT License
 // https://github.com/Earthfiredrake/SWL-FrameworkMod
 
-import flash.filters.DropShadowFilter;
-import flash.geom.Point;
-
-import gfx.utils.Delegate;
-
-import com.GameInterface.DistributedValue;
-import com.GameInterface.Tooltip.TooltipData;
-import com.GameInterface.Tooltip.TooltipInterface;
-import com.GameInterface.Tooltip.TooltipManager;
-import com.Utils.GlobalSignal;
-import com.Utils.Signal;
-import com.Utils.WeakPtr;
-import GUIFramework.SFClipLoader;
-
-import efd.FrameworkMod.lib.etu.GemController;
-import efd.FrameworkMod.lib.etu.MovieClipHelper;
-
-import efd.FrameworkMod.lib.DebugUtils;
-import efd.FrameworkMod.lib.LocaleManager;
-import efd.FrameworkMod.lib.Mod;
-
 // Icon subsystem implementation
 // Dependencies:
 //   Subsystems: Config, Localization
@@ -48,7 +27,22 @@ import efd.FrameworkMod.lib.Mod;
 //           IconMouse_ToggleConfigWindow: Toggles the mod config window DV
 //       ExtraTooltipInfo: Returns a string of additional info to append to the tooltip, default undefined
 
-class efd.FrameworkMod.lib.sys.ModIcon extends MovieClip {
+import flash.filters.DropShadowFilter;
+import flash.geom.Point;
+
+import gfx.utils.Delegate;
+
+import com.GameInterface.DistributedValue;
+import com.GameInterface.Tooltip.TooltipData;
+import com.GameInterface.Tooltip.TooltipInterface;
+import com.GameInterface.Tooltip.TooltipManager;
+import com.Utils.GlobalSignal;
+import com.Utils.Signal;
+import com.Utils.WeakPtr;
+import GUIFramework.SFClipLoader;
+
+// Mod namespace qualified imports and class definition are #included from locally overriden file
+#include "ModIcon.lcl.as"
 	/// Initialization
 	public static function Create(mod:Mod, initObj:Object):MovieClip {
 		// Check dependencies

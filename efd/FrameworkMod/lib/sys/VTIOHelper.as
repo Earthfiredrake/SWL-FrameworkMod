@@ -2,21 +2,20 @@
 // Released under the terms of the MIT License
 // https://github.com/Earthfiredrake/SWL-FrameworkMod
 
-import gfx.utils.Delegate;
-
-import com.GameInterface.DistributedValue;
-import com.Utils.WeakPtr;
-
-import efd.FrameworkMod.lib.LocaleManager;
-import efd.FrameworkMod.lib.Mod;
-
 // LinkVTIO subsystem implementation
 // Dependencies: None (Icon and Config optional)
 // InitObj:
 //   ConfigDV:String (default undefined) Name of DistributedValue to attach to the VTIO mod's configuration UI
 // Handles registration with VTIO compatible topbar and container mods
 // Generally included if a mod has an icon, but can be used for any mod
-class efd.FrameworkMod.lib.sys.VTIOHelper {
+
+import gfx.utils.Delegate;
+
+import com.GameInterface.DistributedValue;
+import com.Utils.WeakPtr;
+
+// Mod namespace qualified imports and class definition are #included from locally overriden file
+#include "VTIOHelper.lcl.as"
 	public static function Create(mod:Mod, initObj:Object):VTIOHelper {
 		return new VTIOHelper(mod, initObj);
 	}

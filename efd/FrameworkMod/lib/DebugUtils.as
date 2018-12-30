@@ -32,8 +32,8 @@ import com.GameInterface.Log;
 import com.GameInterface.Utils;
 import com.Utils.Signal;
 
-class efd.FrameworkMod.lib.DebugUtils {
-
+// Mod namespace qualified imports and class definition are #included from locally overriden file
+#include "DebugUtils.lcl.as"
 /// Basic interface
 	// If not using framework, first instance should be generated using StaticInit()
 	public function DebugUtils(sysName:String) {

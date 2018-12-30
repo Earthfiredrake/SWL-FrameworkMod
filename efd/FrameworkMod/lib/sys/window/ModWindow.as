@@ -9,7 +9,8 @@ import com.GameInterface.DistributedValue;
 import com.GameInterface.EscapeStack;
 import com.GameInterface.EscapeStackNode;
 
-class efd.FrameworkMod.lib.sys.window.ModWindow extends WinComp {
+// Mod namespace qualified imports and class definition are #included from locally overriden file
+#include "ModWindow.lcl.as"
 	private function ModWindow() { // Indirect construction
 		super();
 

@@ -6,14 +6,6 @@
 //   Copyright 2015, eltorqiro
 //   Usage under the terms of the MIT License
 
-import flash.geom.Point;
-
-import com.GameInterface.DistributedValue;
-import com.Utils.Archive;
-import com.Utils.Signal;
-
-import efd.FrameworkMod.lib.DebugUtils;
-
 // WARNING: Recursive or cyclical data layout is verboten.
 //   A config setting holding a reference to a direct ancestor will cause infinite recursion during serialization.
 
@@ -27,7 +19,14 @@ import efd.FrameworkMod.lib.DebugUtils;
 //   ConfigWrappers must descend directly from other ConfigWrappers, they won't load properly if nested within other types
 //     TODO: This may be an issue, and should be fixed if possible
 
-class efd.FrameworkMod.lib.sys.config.ConfigWrapper {
+import flash.geom.Point;
+
+import com.GameInterface.DistributedValue;
+import com.Utils.Archive;
+import com.Utils.Signal;
+
+// Mod namespace qualified imports and class definition are #included from locally overriden file
+#include "ConfigWrapper.lcl.as"
 	// ArchiveName is distributed value name used by top level config wrappers
 	// Leave archiveName undefined for nested config wrappers (unless they are saved externally)
 	// Also leave undefined if loading/saving to the default config specified in Modules.xml

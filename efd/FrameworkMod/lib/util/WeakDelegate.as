@@ -4,7 +4,8 @@
 
 import com.Utils.WeakPtr;
 
-class efd.FrameworkMod.lib.util.WeakDelegate {
+// Mod namespace qualified imports and class definition are #included from locally overriden file
+#include "WeakDelegate.lcl.as"
 	// Holds a weak reference to the object context used as 'this' by the wrapped function
 	// Use to avoid circular references that keep objects alive past the destruction of their root
 	// If the target object no longer exists, does not call wrapped function to avoid side effects

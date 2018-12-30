@@ -2,13 +2,6 @@
 // Released under the terms of the MIT License
 // https://github.com/Earthfiredrake/SWL-FrameworkMod
 
-import com.Utils.Format;
-import com.Utils.LDBFormat;
-import com.Utils.Signal;
-
-import efd.FrameworkMod.lib.DebugUtils;
-import efd.FrameworkMod.lib.Mod;
-
 // Provides string localization features, consisting of two major components:
 //   Parses xml files containing categorized strings (ie: Strings.xml) and stores the localized strings in a globally available lookup table
 //   Parses and evaluates string formatted xml tags for subsystem data loaders, for localized data provision
@@ -40,7 +33,12 @@ import efd.FrameworkMod.lib.Mod;
 
 // Also provides some formatting utilities for strings and simplified lookups for common UI elements
 
-class efd.FrameworkMod.lib.LocaleManager {
+import com.Utils.Format;
+import com.Utils.LDBFormat;
+import com.Utils.Signal;
+
+// Mod namespace qualified imports and class definition are #included from locally overriden file
+#include "LocaleManager.lcl.as"
 	private function LocaleManager() { } // Static class for ease of access and singleton nature
 
 	public static function Initialize(testLocale:String):Void {
@@ -190,9 +188,9 @@ class efd.FrameworkMod.lib.LocaleManager {
 //   10050: Very out of date tutorial text
 //   10058: Spoilers! Various story texts... seems to be a mix of computer terminals, found notes and phone texts
 //   10059: Video playback status messages
-//   10060: Achivement/Lore window boilerplate
+//   10060: Achievement/Lore window boilerplate
 //   10062: TSW scenario console strings
-//   10063: Museum strings (exhibit descriptions, upgrade prompts, player achivements)
+//   10063: Museum strings (exhibit descriptions, upgrade prompts, player achievements)
 //   13000: Installer text
 //   14000: Patcher text
 //   14250: Character rename prompts

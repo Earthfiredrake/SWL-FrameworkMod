@@ -1,18 +1,10 @@
 ﻿// Copyright 2015, eltorqiro
 // Released under the terms of the MIT License
 // https://github.com/eltorqiro/TSW-Utils
-// Modified for FrameworkMod:
+// Modified for EFD SWL Mod Framework:
 //   Copyright 2017-2018, Earthfiredrake
 //   Used and released under the terms of the MIT License
 //   https://github.com/Earthfiredrake/SWL-FrameworkMod
-
-import gfx.core.UIComponent;
-
-import flash.geom.Point;
-
-import efd.FrameworkMod.lib.etu.MovieClipHelper;
-import efd.FrameworkMod.lib.etu.GemOverlay;
-
 
 /**
  *
@@ -24,10 +16,13 @@ import efd.FrameworkMod.lib.etu.GemOverlay;
  * - only create instance of the controller using the create() factory method, do not instantiate using new GemController()
  *
  */
-class efd.FrameworkMod.lib.etu.GemController extends UIComponent {
 
-	public static var __className:String = "efd.FrameworkMod.lib.etu.GemController";
+import flash.geom.Point;
 
+import gfx.core.UIComponent;
+
+// Mod namespace qualified imports and class definition are #included from locally overriden file
+#include "GemController.lcl.as"
 	/**
 	 * do not call this directly
 	 */
